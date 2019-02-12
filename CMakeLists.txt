@@ -16,7 +16,7 @@ endif()
 if(NOT CLANG_TIDY_BIN)
     message(FATAL_ERROR "clang-tidy not found.")
 else()
-    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+    set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "" FORCE)
     set(DO_CLANG_TIDY "${CLANG_TIDY_BIN}")
 endif()
 
