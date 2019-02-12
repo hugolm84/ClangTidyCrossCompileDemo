@@ -1,0 +1,57 @@
+docker@446f97bde3ba:/tmp/workspace/build-docker$ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
+-- Clang-Tidy: '/usr/bin/clang-tidy-7'
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/workspace/build-docker
+docker@446f97bde3ba:/tmp/workspace/build-docker$ cmake --build .
+/opt/cmake/bin/cmake -S/tmp/workspace -B/tmp/workspace/build-docker --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/cmake/bin/cmake -E cmake_progress_start /tmp/workspace/build-docker/CMakeFiles /tmp/workspace/build-docker/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/tmp/workspace/build-docker'
+/usr/bin/make -f CMakeFiles/clang-tidy-demo.dir/build.make CMakeFiles/clang-tidy-demo.dir/depend
+make[2]: Entering directory '/tmp/workspace/build-docker'
+cd /tmp/workspace/build-docker && /opt/cmake/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/workspace /tmp/workspace /tmp/workspace/build-docker /tmp/workspace/build-docker /tmp/workspace/build-docker/CMakeFiles/clang-tidy-demo.dir/DependInfo.cmake --color=
+Scanning dependencies of target clang-tidy-demo
+make[2]: Leaving directory '/tmp/workspace/build-docker'
+/usr/bin/make -f CMakeFiles/clang-tidy-demo.dir/build.make CMakeFiles/clang-tidy-demo.dir/build
+make[2]: Entering directory '/tmp/workspace/build-docker'
+[ 50%] Building CXX object CMakeFiles/clang-tidy-demo.dir/src/main.cc.o
+/opt/cmake/bin/cmake -E __run_co_compile --tidy=/usr/bin/clang-tidy-7 --source=/tmp/workspace/src/main.cc -- /usr/bin/c++    -g   -o CMakeFiles/clang-tidy-demo.dir/src/main.cc.o -c /tmp/workspace/src/main.cc
+/tmp/workspace/src/main.cc:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/tmp/workspace/src/main.cc:4:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(int param);
+  ^~~
+  explicit
+/tmp/workspace/src/main.cc:5:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(double param);
+  ^~~
+  explicit
+/tmp/workspace/src/main.cc:6:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(bool param);
+  ^~~
+  explicit
+/tmp/workspace/src/main.cc:11:15: warning: C-style casts are discouraged; use static_cast/const_cast/reinterpret_cast [google-readability-casting]
+    void* p = (void*)a;
+              ^
+/tmp/workspace/src/main.cc: In function ‘int main()’:
+/tmp/workspace/src/main.cc:10:14: error: ‘nullptr’ was not declared in this scope
+     int* a = nullptr;
+              ^
+CMakeFiles/clang-tidy-demo.dir/build.make:65: recipe for target 'CMakeFiles/clang-tidy-demo.dir/src/main.cc.o' failed
+make[2]: *** [CMakeFiles/clang-tidy-demo.dir/src/main.cc.o] Error 1
+make[2]: Leaving directory '/tmp/workspace/build-docker'
+CMakeFiles/Makefile2:75: recipe for target 'CMakeFiles/clang-tidy-demo.dir/all' failed
+make[1]: *** [CMakeFiles/clang-tidy-demo.dir/all] Error 2
+make[1]: Leaving directory '/tmp/workspace/build-docker'
+Makefile:86: recipe for target 'all' failed
+make: *** [all] Error 2

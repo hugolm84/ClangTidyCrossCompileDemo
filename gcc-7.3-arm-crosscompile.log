@@ -1,0 +1,33 @@
+docker@446f97bde3ba:/tmp/workspace/build-poky$ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -DCMAKE_TOOLCHAIN_FILE:FILEPATH=../arm-poky-cortexa9.cmake ..
+-- Clang-Tidy: '/usr/bin/clang-tidy-7'
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working CXX compiler: /opt/poky/2.4.4/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++
+-- Check for working CXX compiler: /opt/poky/2.4.4/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/workspace/build-poky
+docker@446f97bde3ba:/tmp/workspace/build-poky$ cmake --build .
+/opt/cmake/bin/cmake -S/tmp/workspace -B/tmp/workspace/build-poky --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/cmake/bin/cmake -E cmake_progress_start /tmp/workspace/build-poky/CMakeFiles /tmp/workspace/build-poky/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/tmp/workspace/build-poky'
+/usr/bin/make -f CMakeFiles/clang-tidy-demo.dir/build.make CMakeFiles/clang-tidy-demo.dir/depend
+make[2]: Entering directory '/tmp/workspace/build-poky'
+cd /tmp/workspace/build-poky && /opt/cmake/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/workspace /tmp/workspace /tmp/workspace/build-poky /tmp/workspace/build-poky /tmp/workspace/build-poky/CMakeFiles/clang-tidy-demo.dir/DependInfo.cmake --color=
+Scanning dependencies of target clang-tidy-demo
+make[2]: Leaving directory '/tmp/workspace/build-poky'
+/usr/bin/make -f CMakeFiles/clang-tidy-demo.dir/build.make CMakeFiles/clang-tidy-demo.dir/build
+make[2]: Entering directory '/tmp/workspace/build-poky'
+[ 50%] Building CXX object CMakeFiles/clang-tidy-demo.dir/src/main.cc.o
+/opt/cmake/bin/cmake -E __run_co_compile --tidy=/usr/bin/clang-tidy-7 --source=/tmp/workspace/src/main.cc -- /opt/poky/2.4.4/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++  -DCACHE_LINE_SIZE=32  -march=armv7-a -marm -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a9 --sysroot=/opt/poky/2.4.4/sysroots/cortexa9hf-neon-poky-linux-gnueabi -g   -o CMakeFiles/clang-tidy-demo.dir/src/main.cc.o -c /tmp/workspace/src/main.cc
+[100%] Linking CXX executable clang-tidy-demo
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/clang-tidy-demo.dir/link.txt --verbose=1
+/opt/poky/2.4.4/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++  -march=armv7-a -marm -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a9 --sysroot=/opt/poky/2.4.4/sysroots/cortexa9hf-neon-poky-linux-gnueabi -g   CMakeFiles/clang-tidy-demo.dir/src/main.cc.o  -o clang-tidy-demo
+make[2]: Leaving directory '/tmp/workspace/build-poky'
+[100%] Built target clang-tidy-demo
+make[1]: Leaving directory '/tmp/workspace/build-poky'
+/opt/cmake/bin/cmake -E cmake_progress_start /tmp/workspace/build-poky/CMakeFiles 0

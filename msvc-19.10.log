@@ -1,0 +1,43 @@
+C:\Zebra\clang-tidy-demo\build-ninja>cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -G Ninja -DCMAKE_MAKE_PROGRAM="C:\Program Files\Ninja\ninja.exe" ..
+-- Clang-Tidy: 'C:/Program Files/LLVM/bin/clang-tidy.exe'
+-- The CXX compiler identification is MSVC 19.10.25027.0
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.10.25017/bin/HostX64/x64/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.10.25017/bin/HostX64/x64/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Zebra/clang-tidy-demo/build-ninja
+
+C:\Zebra\clang-tidy-demo\build-ninja>cmake --build .
+[1/2] "C:\Program Files\CMake\bin\cmake.exe" -E __run_co_compile --tidy="C:/Program Files/LLVM/bin/clang-tidy.exe" --source=..\src\main.cc -- C:\PROGRA~2\MICROS~4\2017\PROFES~1\VC\Tools\MSVC\1410~1.250\bin\HostX64\x64\cl.exe   /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\clang-tidy-demo.dir\src\main.cc.obj /FdCMakeFiles\clang-tidy-demo.dir\ /FS -c ..\src\main.cc
+C:\Zebra\clang-tidy-demo\build-ninja\..\src\main.cc:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+C:\Zebra\clang-tidy-demo\build-ninja\..\src\main.cc:4:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(int param);
+  ^
+  explicit
+C:\Zebra\clang-tidy-demo\build-ninja\..\src\main.cc:5:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(double param);
+  ^
+  explicit
+C:\Zebra\clang-tidy-demo\build-ninja\..\src\main.cc:6:3: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  Foo(bool param);
+  ^
+  explicit
+C:\Zebra\clang-tidy-demo\build-ninja\..\src\main.cc:11:15: warning: C-style casts are discouraged; use static_cast/const_cast/reinterpret_cast [google-readability-casting]
+    void* p = (void*)a;
+              ^
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25027 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+[2/2] cmd.exe /C "cd . && "C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\clang-tidy-demo.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\PROFES~1\VC\Tools\MSVC\1410~1.250\bin\HostX64\x64\link.exe  CMakeFiles\clang-tidy-demo.dir\src\main.cc.obj  /out:clang-tidy-demo.exe /implib:clang-tidy-demo.lib /pdb:clang-tidy-demo.pdb /version:0.0  /machine:x64 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+Microsoft (R) Incremental Linker Version 14.10.25027.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Microsoft (R) Incremental Linker Version 14.10.25027.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
