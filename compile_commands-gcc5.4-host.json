@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/tmp/workspace/build",
+  "command": "/usr/bin/c++    -g   -o CMakeFiles/clang-tidy-demo.dir/src/main.cc.o -c /tmp/workspace/src/main.cc",
+  "file": "/tmp/workspace/src/main.cc"
+}
+]

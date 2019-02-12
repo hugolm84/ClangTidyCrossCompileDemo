@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/tmp/workspace/build",
+  "command": "/opt/poky/2.4.4/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++    -march=armv7-a -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a9 --sysroot=/opt/poky/2.4.4/sysroots/cortexa9hf-neon-poky-linux-gnueabi -g   -o CMakeFiles/clang-tidy-demo.dir/src/main.cc.o -c /tmp/workspace/src/main.cc",
+  "file": "/tmp/workspace/src/main.cc"
+}
+]

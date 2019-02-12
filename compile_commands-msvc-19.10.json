@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Zebra/clang-tidy-demo/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\2017\\PROFES~1\\VC\\Tools\\MSVC\\1410~1.250\\bin\\HostX64\\x64\\cl.exe   /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /FoCMakeFiles\\clang-tidy-demo.dir\\src\\main.cc.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Zebra\\clang-tidy-demo\\src\\main.cc",
+  "file": "C:/Zebra/clang-tidy-demo/src/main.cc"
+}
+]
